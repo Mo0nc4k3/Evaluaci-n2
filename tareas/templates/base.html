@@ -1,0 +1,28 @@
+<!-- templates/base.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Gestor de Tareas</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- opcional: link CSS en static -->
+</head>
+<body>
+  <header>
+    <h1><a href="{% url 'tareas:tarea_list' %}">Gestor de Tareas</a></h1>
+    <nav>
+      <a href="{% url 'tareas:tarea_create' %}">Crear Tarea</a> |
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <hr>
+    <p></p>
+  </footer>
+</body>
+</html>
